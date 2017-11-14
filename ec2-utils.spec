@@ -7,6 +7,11 @@
 %undefine with_upstart
 %endif
 
+%if 0%{?rhel} >= 7
+%define with_systemd 1
+%undefine with_upstart
+%endif
+
 Name:      ec2-utils
 Summary:   A set of tools for running in EC2
 Version:   0.5
